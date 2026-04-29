@@ -16,6 +16,9 @@ declare module '*.svg' {
   export default content;
 }
 
+/**
+ * Allows to recognize PNG imports.
+ */
 declare module '*.png' {
   const content: string;
   export default content;
