@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    // Build Settings
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "isolatedModules": true,
+
+    // Linting (TypeScript) Settings
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowUnusedLabels": true,
+
+    // Alias Settings
+    "paths": {
+      "@*": ["./src/*"]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+  --background: oklch(95.834% 0.01041 248.177);
+  /* Colores quemados aquí, en formato OKLCH */
+}
+
+@theme {
+  --color-background: var(--background);
+  /* Extender la paleta de colores aquí */
+}
