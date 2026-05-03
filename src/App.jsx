@@ -1,3 +1,4 @@
+import VoteCounter from '@components/ui/voteCounter'
 /** @import { JSX } from 'react' */
 
 /**
@@ -5,5 +6,9 @@
  * @returns {JSX.Element} El componente de la aplicación.
  */
 export const App = () => {
-  return <h1 className="text-3xl font-bold underline">Hello, World!</h1>
+  return (
+    <section className="bg-background min-h-screen flex items-center justify-center">
+      <VoteCounter />
+    </section>
+  )
 }
