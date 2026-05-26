@@ -1,3 +1,17 @@
+/*
+-Renderiza una sección fija en la parte inferior (`position: fixed` con clases Tailwind).
+-Muestra avatar del usuario actual (imagen hardcodeada en el componente).
+-Renderiza un input con placeholder **“Add a comment...”**.
+-Renderiza un botón 
+**Send**.*/
+/**
+ * CommentForm
+ *
+ * Renderiza el formulario UI para agregar un comentario.
+ * Actualmente es un componente de solo presentación: no recibe props ni maneja submit.
+ *
+ * @returns {any}
+ */
 const CommentForm = () => {
   return (
     <section className="flex fixed bottom-4 left-1/2 -translate-x-1/2  rounded-lg p-6 shadow-md w-[92%] md:w-[50%] bg-white h-55 md:h-35 z-50">

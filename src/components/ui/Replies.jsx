@@ -1,33 +1,47 @@
+/**
+ * Replies
+ *
+ * Renderiza la lista de respuestas anidadas para un comentario.
+ * Si no hay respuestas, muestra un mensaje.
+ *
+ * @returns {import('react').JSX.Element}
+ *
+ * @example
+ * <Replies />
+ */
 const Replies = ({ comment }) => {
   return (
     <div className="flex flex-col gap-4 mt-4">
-      {!comment.replies.length && (
+      {comment.replies.length === 0 ? (
         <p className="text-grey-500 text-sm">
           Este comentario no tiene respuestas.
         </p>
-      )}
-      {comment.replies.map((item) => (
-        <section key={item.id}>
-          <div className="flex items-center">
-            <div className="flex flex-col w-full bg-background p-10 rounded-lg">
-              <div className="flex flex-col md:flex-row items-center gap-3 mb-3">
-                <img
-                  src={item.user.image.png}
-                  alt={item.user.username}
-                  className="w-8 h-8 rounded-full"
-                />
+      ) : (
+        comment.replies.map((item) => (
+          <section key={item.id}>
+            <div className="flex items-center">
+              <div className="flex flex-col w-full bg-background p-10 rounded-lg">
+                <div className="flex flex-col md:flex-row items-center gap-3 mb-3">
+                  <img
+                    src={item.user.image.png}
+                    alt={item.user.username}
+                    className="w-8 h-8 rounded-full"
+                  />
 
-                <span className="font-semibold text-purple-600">
-                  {item.user.username}
-                </span>
+                  <span className="font-semibold text-purple-600">
+                    {item.user.username}
+                  </span>
 
-                <span className="text-grey-500 text-sm">{item.createdAt}</span>
+                  <span className="text-grey-500 text-sm">
+                    {item.createdAt}
+                  </span>
+                </div>
+                <p className="text-grey-500">{item.content}</p>
               </div>
-              <p className="text-grey-500">{item.content}</p>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        ))
+      )}
     </div>
   )
 }

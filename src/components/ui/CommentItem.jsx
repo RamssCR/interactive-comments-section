@@ -1,8 +1,26 @@
 import Replies from '@components/ui/Replies'
 import ReplyButton from '@components/ui/ReplyButton'
-import VoteCounter from '@components/ui/VoteCounter'
+import VoteCounter from '@components/ui/voteCounter'
 import { useState } from 'react'
 
+/**
+ * CommentItem
+ *
+ * Renderiza un comentario de primer nivel junto con su contador de votos.
+ * Permite mostrar/ocultar respuestas (Replies) mediante un estado local.
+ *
+ * @param {{ item: {
+ *  id: number|string,
+ *  content: string,
+ *  createdAt: string,
+ *  user: { username: string, image: { png: string, webp: string } },
+ *  replies: Array<any>
+ * } }} props
+ * @returns {import('react').JSX.Element}
+ *
+ * @example
+ * <CommentItem />
+ */
 const CommentItem = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false)
 

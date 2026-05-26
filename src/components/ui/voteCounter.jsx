@@ -1,4 +1,5 @@
 import useVoteCounter from '@hooks/useVoteCounter'
+
 const VoteCounter = () => {
   const { count, increment, decrement, lastAction } = useVoteCounter(12)
 
