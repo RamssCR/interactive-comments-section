@@ -31,7 +31,8 @@ export default defineConfig(({ mode }) => {
     },
     test: {
       environment: 'jsdom',
-      setupFiles: ['test/setupTests.js'],
+      setupFiles: ['src/test/setupTests.js'],
+
       include: ['src/**/*.spec.{js,jsx}'],
       reporters: ['dot'],
       coverage: {
