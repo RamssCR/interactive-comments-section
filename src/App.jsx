@@ -1,3 +1,5 @@
+import CommentForm from '@components/ui/CommentForm'
+import Comments from '@components/ui/Comments'
 /** @import { JSX } from 'react' */
 
 /**
@@ -5,5 +7,12 @@
  * @returns {JSX.Element} El componente de la aplicación.
  */
 export const App = () => {
-  return <h1 className="text-3xl font-bold underline">Hello, World!</h1>
+  return (
+    <section className="bg-grey-50 min-h-screen flex flex-col items-center justify-center w-full h-full">
+      <div className="md:max-w-[85%] my-10 mb-50">
+        <Comments />
+      </div>
+      <CommentForm />
+    </section>
+  )
 }
